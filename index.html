@@ -6,10 +6,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+    <!-- 导入图标库 -->
+    <link rel="stylesheet" href="./assets/fonts/iconfont.css">
+    <!-- 导入自己的css样式 -->
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
 <body>
-    
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo layui-hide-xs layui-bg-black">
+                <img src="./assets/images/logo.png" alt="">
+            </div>
+            <!-- 头部区域（可配合layui 已有的水平导航） -->
+            <ul class="layui-nav layui-layout-left">
+                <!-- 移动端显示 -->
+                <li class="layui-nav-item layui-show-xs-inline-block layui-hide-sm" lay-header-event="menuLeft">
+                    <i class="layui-icon layui-icon-spread-left"></i>
+                </li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+                    <a href="javascript:;">
+                        <img src=""
+                            class="layui-nav-img">
+                        <span class="round">A</span>
+                        个人中心
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">Your Profile</a></dd>
+                        <dd><a href="">Settings</a></dd>
+                        <dd><a href="">Sign out</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
+                    <a href="javascript:;" id="delogin">
+                        <span class="iconfont icon-tuichu"></span>
+                        退出
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <div href="javascript:;" class="userimg">
+                    <img src=""
+                        class="layui-nav-img">
+                    <span class="round">A</span>
+                    <span class="welcome"></span>
+                </div>
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-shrink="all">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="layui-this" href="./home/dashboard.html" target="fm">
+                            <span class="iconfont icon-home"></span>
+                            首页
+                        </a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <span class="iconfont icon-16"></span>
+                            文章管理
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;">
+                                    <span class="iconfont icon-16"></span>
+                                    list 1
+                                </a></dd>
+                            <dd><a href="javascript:;">
+                                    <span class="iconfont icon-16"></span>
+                                    list 2
+                                </a></dd>
+                            <dd><a href="javascript:;">
+                                    <span class="iconfont icon-16"></span>
+                                    超链接
+                                </a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <span class="iconfont icon-user"></span>
+                            个人中心
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;">
+                                    <span class="iconfont icon-user"></span>
+                                    list 1
+                                </a></dd>
+                            <dd><a href="javascript:;">
+                                    <span class="iconfont icon-user"></span>
+                                    list 2
+                                </a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <!-- 通过 ifarm 标签来显示不同的内容 -->
+            <iframe src="./home/dashboard.html" name="fm" frameborder="0">
+
+            </iframe>
+        </div>
+
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            @ http://127.0.0.1
+        </div>
+    </div>
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <!-- 导入jQuery -->
+    <script src="./assets/lib/jquery.js"></script>
+    <!-- 导入baseAPI.js -->
+    <script src="./assets/js/baseAPI.js"></script>
+    <!-- 导入index.html -->
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
