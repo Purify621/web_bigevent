@@ -22,7 +22,6 @@ function getUserInfo(){
             if(res.status !== 0){
                 return console.log(res.message);
             }
-            console.log(res);
             // 渲染用户信息函数
             readerAventg(res.data)
         }
@@ -37,7 +36,7 @@ function readerAventg(user){
     // 判断图片是否有地址，有则显示图片，没有则显示默认图片
     if(user.user_pic !== null){
         // 渲染用户头像
-        $('.layui-nav-img').attr('src',user.user.pic).show()
+        $('.layui-nav-img').attr('src',user.user_pic).show()
         $('.round').hide()
     }
     else{
@@ -47,4 +46,9 @@ function readerAventg(user){
         let text = user1[0].toUpperCase()
         $('.round').text(text.toUpperCase())
     }
+}
+
+//子页面跳转回login页面
+function rLogin(){
+    location.href='../login.html'
 }

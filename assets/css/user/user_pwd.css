@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 15px;
+    background-color: #f1f2f3;
+}
+#form_pwd{
+    width: 400px;
+}
